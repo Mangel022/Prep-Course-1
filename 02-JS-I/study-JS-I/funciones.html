@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        /* //Funciones -> son tipo particulares de objetos, llamados callable objects u objetos invocables. por los que tienen la misma propiedad que cualquier objeto.
+        //hay 3 formas en como construir una funcion.
+        function miFuncion(){};
+        var otraFuncion = function () {};
+        var yOtra = () => {};
+
+        //ejemplo
+
+        function saludo(){
+            console.log("Hola mundo");
+        }
+
+        saludo();
+        */
+
+        /* //Argumentos en funciones -> en el parentesis definimos la variable que se va tomar al llamar la funcion
+        function saludo(nombre){
+            console.log("Hola "+nombre);
+        }
+
+        saludo("miguel"); */
+
+        /* //tambien podemos pasar otras variables a esto
+        function saludo(nombre){
+            console.log(`Hola, ${nombre}`);
+        }
+        var miNombre = "Miguel"
+        saludo(miNombre) */
+
+        /* //Podemos pasar multiples argumentos
+        function sumarDosNumeros(a, b){
+            var suma = a + b;
+            return suma; //return es devolver e imprimir el valor de lo que se ha ejecutado
+        } */
+
+        /* //Declaracion  return la funcion detiene inmediatamente lo que esta haciendo y devuelve lo especificado.
+        //Si intentamos console.log algo que declaramos dentro de la funcion , devolvera undifined porque no tenemos acceso a el fuera de la funcion. Eso se llama "Scope" (alcance). La unica forma de acceder a algo dentro de la funcion es devolverlo.
+        //tambien podemos establecer variables para igualar lo que devuelve la funcion. ejemplo.
+        function restarDosNumeros(a, b){
+            var resta = a - b;
+            return resta;
+        }
+
+        var diferenciaDeResta = restarDosNumeros(10, 9);
+        console.log(diferenciaDeResta);
+        console.log(resta); */
+
+        //Control de flujo y operadores de comparacion -> el flujo de control es una forma  de que nuestra funcion verifique si algo es true para seguir avanzando en el codigo si es asi o si no lo es.
+        function controlFlujo(edad){
+            if(edad >= 18){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>
