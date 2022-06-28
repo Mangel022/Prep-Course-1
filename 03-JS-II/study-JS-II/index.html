@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        /* //Veracidad -> cuando se hace una declaracion IF u otra declaracion que espera un valor booleano (como !, NOT) y la expresion dada no es un valor booleano, javaScript hara algo llamado "coercion de tipo" y transformara lo que sea que se le entregue a un valor booleano. Esto se conoce como "truthy" y "falsey". cada tipo de dato tiene una veracidad. ejmplo:
+
+        //datos que son forzados a verdadero/"true"
+        true
+        1
+        ' '//apesar que es una cadena vacia al agregar el espacio genera un string
+        []//un aray
+        {}// un objeto
+        funtion(){}
+
+        //datos que son forzados a falso/"false"
+        false
+        0
+        undefined
+        null
+        ''//cadena vacia
+        */
+
+        //OPERADORES DE COMPARACION
+        1 > 2; //false
+        2 < 3; //true
+        10 >= 10; //true
+        100 <= 1; //false
+
+        //El triple igual (===) no se debe confundir a un solo igual (=) -> es de asignacion de variables. El triple igual comparara todo sobe los dos elementos, incluido el tipo. ejemplo
+        1 === '1'//false
+        //a tener en cuenta hay un doble igual (==) -> que compara elementos, pero no tendra encuenta sus tipos. ejemplo
+        1 == '1' //true
+        //debido a eso se considera una mala practica usar doble igual.
+
+        // (!) este ultimo comparador tiene 2 partes
+        //NOT(!) -> cuando veas esto significa que estamos preguntando lo contrario a la expresion.
+        //!== -> No es igual. ejemplo
+        1 !== '1'; //true
+        1 !== 1; //false
+        'perro' !== 'perro' //false
+        'perro' !== 'Perro' //true
+
+
+    </script>
+</body>
+</html>
