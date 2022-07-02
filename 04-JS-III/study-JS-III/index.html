@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Introduccion a ARRAYS(arreglos/matices)
+        //Arrays -> coleccion de datos. ejemplo
+        //const nombesEstudiantes = ['Miguel', 'William', 'Salomon', 'Boris']; // -> Asi se declaran las variables
+
+        //.length -> devolvara el numero de elementos de una matriz. ejemplo
+        //console.log(nombesEstudiantes.length); //4
+
+        //Acceso de elementos de una string -> siempre comienza con 0. (esto puede parecer complicado al principio pero recuerda que las matrices comienzan con 0).
+        /* const nombesEstudiantes = ['Miguel', 'William', 'Salomon', 'Boris'];
+                                //   0          1          2          3 */
+        //Para acceder al elemento, escribimos el nombre o la variable de matriz, seguido de corchetes que contienen la asignacion numerica.
+        //console.log(nombesEstudiantes[1]); // william
+
+        //Para acceder dinamicamente al ultimo elemento de la matriz, utilizaremos el metodo .length. ejemplo:
+        //console.log(nombesEstudiantes[nombesEstudiantes.length -1]);
+
+        //Asignar -> podemos asignar y designar cualquier indice en la matriz usando los corchetes/indice y un "=". ejmplo
+        /* nombesEstudiantes[3] = "toño"; // -> le asignamos un nuevo valor queda como remplazo el que esta definido en el array por otro
+        console.log(nombesEstudiantes); //[miguel, william, salomon, toño] */
+
+        //.PUSH .POP -> estos metodos se refieren a la adicion y a la eliminacion de un elemento de la matriz despues de su declaracion inicial.
+        //.push -> agrega al final de la matriz
+        /* const nombesEstudiantes = ['Miguel', 'William', 'Salomon', 'Boris'];
+
+        nombesEstudiantes.push('toño');
+        console.log(nombesEstudiantes); //['Miguel', 'William', 'Salomon', 'Boris','toño'] */
+
+        //.pop -> elimina el ultimo elemento de la matriz.
+        /* const nombesEstudiantes = ['Miguel', 'William', 'Salomon', 'Boris'];
+
+        nombesEstudiantes.pop();
+        console.log(nombesEstudiantes); //['Miguel', 'William', 'Salomon'] */
+
+        //.unshift y .shift -> son lo mismo que push y pop, excepto que operan en el primer elemento de la matriz
+        //.unshift -> agrega elementos en la primera posicion.
+        //.shift -> quita elementos de la primera posicion.
+
+
+        //for en arrays
+        const nombesEstudiantes = ['Miguel', 'William', 'Salomon', 'Boris'];
+
+        for(let i = 0; i <= nombesEstudiantes.length; i++){
+            if(i !== 0){
+                console.log(nombesEstudiantes[nombesEstudiantes.length -i])
+
+            }
+        }
+
+        //EJERCICIO
+        function incrementarPorUno(array) {
+            // "array" debe ser una matriz de enteros (int/integers)
+            // Aumenta cada entero por 1
+            // y devuelve el array
+            // Tu código:
+            for(let i = 0; i < array.length; i++){
+                array[i] = array[i] + 1;
+            }
+            return array;
+        }
+    </script>
+</body>
+</html>
