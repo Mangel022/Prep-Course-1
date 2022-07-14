@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //CLASES Y PROTOTYPE
+
+        //CLASES
+        // -> muchas veces cuando creamos objetos, estamos creando una plantilla, En lugar de copiar esa plantilla una y otra vez, Javascript nos da acceso a lo que llamamos constructor o class. Las clases comparten gran funcionalidad que los objetos normales, pero tambien se expanden mucho en esa funcionalidad. Las clases son utiles para crear muchos objetos que comparten algunas de las propiedaes y metodos (como los usuarios en un sitio web).
+
+        //Clases e instanciacion pseudo-clasica
+        // -> Si tiene suna experiencia en un lenguaje orientado a objetos(python), probablemente estes familirizado con el concepto de clases. Llamaremos a nuestras clases o constructor 'clases'. Se instancia de manera pseudo clasica, usando la palabra clave NEW y puede tomar argumentos.
+
+        function Gato(nombre){
+            this.nombre = nombre;
+            this.maullar = function(){
+                return "Mi nombre es "+ this.nombre + " ...Meow!";
+            }
+        }
+
+        const sam = new Gato("sam");
+        const kitty = new Gato("Kitty");
+        console.log(sam.maullar());
+        console.log(kitty.maullar());
+
+        //This en las clases.
+        //-> esto se puede volver muy confuso cuando comenzamos a verlo en las clases.  Una buena regla general si no está seguro de a qué se refiere `this`, es observar dónde se llama el método y el objeto a la izquierda del 'punto'. Ese es el objeto al que se refiere `this`.
+
+        //PROTOTYPE
+        // -> La creacion de funciones es costosa (refiriendonos a la capacidad de una memoria en la computadora) y cada vez que creamos un nuevo objeto de clase de metodos, estamos recreando esos metodos en la memoria. Las clases tienen una forma unica de establecer un metodo una vez y dar acceso a cada objeto de esa clase a esos metodos. Esto se llama `prototype` cada clase tiene una propiedad prototype.
+
+        function Usuario(nombre, github){
+            this.nombre = nombre;
+            this.github = github;
+        }
+
+        Usuario.prototype.introduccion = function(){
+            return "Mi nombre es: "+ this.nombre + ", Mi usuario de github es: "+this.github;
+        }
+
+        let miguel = new Usuario("Miguel", "mangel022");
+        let antonio = new Usuario("Antonio", "Antoni99");
+
+        console.log(miguel.introduccion());
+        console.log(antonio.introduccion());
+    </script>
+</body>
+</html>

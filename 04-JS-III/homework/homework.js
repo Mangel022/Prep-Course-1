@@ -265,8 +265,17 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var almacen = [];
+  for(let  i = 0; i < 10; i++){
+    numero = numero + 2;
+    almacen.push(numero);
+    if(numero === i){
+      break;
+    }
+    return "Se interrumpió la ejecución"
+  }
+  return almacen;
 }
-
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -275,6 +284,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var almacen = [];
+  for(let i = 0; i < 10; i++){
+    if(i === 5){
+      continue;
+    }else{
+      numero = numero + 2;
+      almacen.push(numero);
+    }
+  }
+  return almacen;
 }
 
 
